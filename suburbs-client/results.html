@@ -3,8 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>BurbFindr results</title>
+  <link rel="stylesheet" href="css/grid.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  <meta name="viewport" content="width=device-width">
 </head>
 <body>
+
+
+  <header class="section search-refine">
+    <h2>refine search</h2>
+    <div class="refinements">
+      <input type="text" id="borrowing-power" placeholder="Purchase amount" value="">
+      <select id="locality">
+        <option>NT</option>
+        <option>QLD</option>
+        <option>NSW</option>
+        <option>ACT</option>
+        <option>VIC</option>
+        <option>SA</option>
+        <option>TAS</option>
+        <option>WA</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="section results-detail">
+    <main class="col span_1_of_3 results">
+      results
+    </main>
+
+    <aside class="col span_2_of_3 map">
+      map
+    </aside>
+  </div>
+
 
 </body>
 </html>

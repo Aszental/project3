@@ -1,15 +1,19 @@
-body {
+.bg-img {
   background:
   linear-gradient(
 	  rgba(233, 233, 230, 0.63),
 	  rgba(233, 233, 230, 0.63)
     ),
-  url(../assets/apartment.jpg) no-repeat center center;
+  url(../assets/apartment.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+html, body {
   font-family: 'Lato', sans-serif;
+  height: 100%; margin: 0px; padding: 0px;
 }
 
 label, input, button, footer {
@@ -79,7 +83,7 @@ h2 {
   background-color: mintcream;
 }
 
-.span_1_of_3 {
+.info-text {
   padding: 1.5em;
 }
 
@@ -100,4 +104,33 @@ p {
   padding-top: 1em;
   padding-right: 1em;
   text-align: right;
+}
+
+/* results page*/
+
+.search-refine {
+  background: red;
+}
+
+.refinements {
+  display: flex;
+}
+
+#borrowing-power {
+  margin-right: 1em;
+}
+
+.results-detail {
+  height: 100%;
+  background: linen;
+}
+
+.results {
+  background: green;
+  height: 100%;
+}
+
+.map {
+  background: yellow;
+  height: 100%;
 }
