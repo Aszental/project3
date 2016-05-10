@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find out where to buy!</title>
+  <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Suburb search</h1>
+  </div>
+
+  <div class="container">
+    <form class="form-inline">
+      <div class="form-group">
+        <label class="" for="exampleInputAmount">How much do you want to pay?</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" class="form-control" id="borrowing-power" placeholder="Amount" value="">
+        </div>
+        <label class="" for="exampleInputAmount">State</label>
+        <div class="input-group">
+          <select id="locality" class="form-control">
+            <option>NT</option>
+            <option>QLD</option>
+            <option>NSW</option>
+            <option>ACT</option>
+            <option>VIC</option>
+            <option>SA</option>
+            <option>TAS</option>
+            <option>WA</option>
+          </select>
+        </div>
+      </div>
+      <button id="search" type="submit" class="btn btn-primary">Go</button>
+    </form>
+  </div>
+
+<script src="js/jquery.js" charset="utf-8"></script>
+<script src="js/underscore.js" charset="utf-8"></script>
+<script src="js/handlebars.js" charset="utf-8"></script>
+<script src="js/backbone.js" charset="utf-8"></script>
+<script src="js/app.js" charset="utf-8"></script>
+</body>
+</html>
