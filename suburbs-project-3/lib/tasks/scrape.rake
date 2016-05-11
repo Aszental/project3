@@ -62,7 +62,8 @@ end
            suburb.save
            sleep 7
          end
-      elsif row[0] == "VIC"
+
+      elsif row[2] == "VIC"
         if (Geocoder::Calculations.distance_between(vic, [row[5].to_i, row[6].to_i])) < 20
            url =  "http://house.ksou.cn/profile.php?q=" + row[1].to_s + "%2C+" + row[2]
            @doc = Nokogiri::HTML(open(url))
@@ -82,7 +83,8 @@ end
            suburb.save
            sleep 7
          end
-    elsif row[0] == "SA"
+
+    elsif row[2] == "SA"
       if (Geocoder::Calculations.distance_between(sa, [row[5].to_i, row[6].to_i])) < 20
          url =  "http://house.ksou.cn/profile.php?q=" + row[1].to_s + "%2C+" + row[2]
          @doc = Nokogiri::HTML(open(url))
@@ -102,7 +104,8 @@ end
          suburb.save
          sleep 7
        end
-    elsif row[0] == "WA"
+
+    elsif row[2] == "WA"
       if (Geocoder::Calculations.distance_between(wa, [row[5].to_i, row[6].to_i])) < 20
      url =  "http://house.ksou.cn/profile.php?q=" + row[1].to_s + "%2C+" + row[2]
      @doc = Nokogiri::HTML(open(url))
