@@ -16,9 +16,6 @@ module Api
       suburbs = Suburb.all
       suburb_array = []
 
-
-
-
       suburbs.each do |suburb|
         if (suburb.median_price_unit < max_price && suburb.median_price_unit > min_price) || (suburb.median_price_house < max_price && suburb.median_price_house > min_price)
           suburb_array.push({suburbName: suburb.suburb_name, housePrice: suburb.median_price_house, geocode: suburb.geocode })
