@@ -14,24 +14,18 @@ module Api
       max_price = params[:max_price].to_i
 
       suburbs = Suburb.all
-      sub_select_units = []
-      sub_select_houses = []
+      suburb_array = []
+
+
+
 
       suburbs.each do |suburb|
-        if suburb.median_price_unit < max_price
-          if suburb.median_price_unit > min_price
-            sub_select_units.push(suburb.suburb_name)
-          end
-        end
-        if suburb.median_price_house < max_price
-          if suburb.median_price_house > min_price
-            sub_select_houses.push(suburb.suburb_name)
-          end
+        if (suburb.median_price_unit < max_price && suburb.median_price_unit > min_price) || (suburb.median_price_house < max_price && suburb.median_price_house > min_price)
+          suburb_array.push({suburbName: suburb.suburb_name, housePrice: suburb.median_price_house, geocode: suburb.geocode })
         end
       end
 
-      suburb_hash = {unit_afford_subs: sub_select_units, houses_afford_subs: sub_select_houses}
-      render json: suburb_hash.to_json, status: 200
+      render json: suburb_array.to_json, status: 200
 
 #      binding.pry
     end
